@@ -9,14 +9,14 @@ var player=rs.question("Please enter your name");
 
 
 
-var welcomeMessage="Welcome ${player}"
+var welcomeMessage=`Welcome ${player}`
 
 
 console.log(welcomeMessage);
 
 
 
-var answer=rs.question("What is my profession?");
+var answer=rs.question(`What is my profession?`);
 
 var check;
 
@@ -27,4 +27,4 @@ else{
     check="wrong answer";
 }
 
-console.log('Hey! It was a ${check}');
+console.log(`Hey! It was a ${check}`);
