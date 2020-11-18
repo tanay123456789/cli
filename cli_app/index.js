@@ -14,36 +14,37 @@ var welcomeMessage=`Welcome ${player}`
 
 console.log(welcomeMessage);
 
-
 var score=0;
-var answer=rs.question(`What is my profession?`);
 
-var check;
 
-if(answer==="Student"||answer==="student"||answer==="STUDENT"){
-    check="right answer";
-    score+=1;
-}
-else{
-    check="wrong answer";
-    score-=1;
-}
-
-console.log(`Hey! It was a ${check}`);
-console.log(`your score is ${score}`);
-
-function gameplay(question,answer,score){
+function gameplay(question,Correctanswer,score){
     var isAnswerCorrect;
 
     var answer=rs.question(question);
 
-    if(answer===correctAnswer){
+    if(answer===CorrectAnswer){
         isAnswerCorrect=true;
+        score+=1;
     }
-
-
-    return isAnswerCorrect,updatedScore
+    else{
+        isAnswerCorrect=false;
+        score-=1;
+    }
+    return isAnswerCorrect;
 }
+const check=gameplay('What is my profession?',student,score);
+if(check===true){
+
+    console.log(`Hey! It was a right answer`);
+    console.log(`your score is ${score}`);
+}
+
+else{
+    console.log(`Hey! It was a right answer`);
+    console.log(`your score is ${score}`);
+
+}
+
 
 
 
