@@ -10,7 +10,7 @@ var score=0;
 
 
 
-function gameplay(question,CorrectAnswer,score){
+function gameplay(question,CorrectAnswer){
     var isAnswerCorrect;
 
     var answer=rs.question(question);
@@ -26,7 +26,7 @@ function gameplay(question,CorrectAnswer,score){
     }
     return isAnswerCorrect;
 }
-const check=gameplay('What is my profession?','student',score);
+const check=gameplay('What is my profession?','student');
 if(check===true){
 
     console.log(`Hey! It was a right answer`);
