@@ -26,7 +26,11 @@ function gameplay(question,CorrectAnswer){
     }
     return isAnswerCorrect;
 }
-const check=gameplay('What is my profession?','student');
+var qna={
+    question:"What is my profession?",
+    answer:"student"
+}
+const check=gameplay('qna.question','qna.answer');
 if(check===true){
 
     console.log(`Hey! It was a right answer`);
@@ -38,3 +42,8 @@ else{
     console.log(`your score is ${score}`);
 
 }
+
+
+
+
+
